@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04.html</title>
+
+    <style>
+        div.header {
+            border: 1px dashed red;
+            width: 900px;
+            height: 200px;
+            margin: 10px auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        div.nav {
+            width: 450px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        div.menu {
+            display: inline-block;
+            width: 80px;
+            height: 35px;
+            background-color: antiquewhite;
+        }
+        div.main {
+            border: 1px dashed blue;
+        }
+        div.left {
+            display: inline-block;
+            width: 200px;
+            background-color: burlywood;
+            padding: 20px;
+
+            position: relative;
+            top: -220px;
+        }
+        div.left > ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        div.left > ul > li {
+            margin: 10px auto;
+            width: 100px;
+        }
+        div.right {
+            border: 1px dashed black;
+            width: 500px;
+            display: inline-block;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <h1><a href="#">LOGO</a></h1>
+        </div>
+        <div class="nav">
+            <div class="menu">menu1</div>
+            <div class="menu">menu2</div>
+            <div class="menu">menu3</div>
+            <div class="menu">menu4</div>
+            <div class="menu">menu5</div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <ul>
+                <li><a href="#">sub-menu1</a></li>
+                <li><a href="#">sub-menu2</a></li>
+                <li><a href="#">sub-menu3</a></li>
+                <li><a href="#">sub-menu4</a></li>
+                <li><a href="#">sub-menu5</a></li>
+                <!-- ol, ul 태그는 왼쪽에 기본으로 여백을 자동으로 생성함 없애고 싶다면 style을 이용해야함 -->
+            </ul>
+        </div>
+        <div class="right">
+            <div class="section">
+                <img src="../day26/짱구/짱구.png" width="100">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quam, id at itaque tempore necessitatibus voluptates animi quos hic quae esse tempora mollitia ratione voluptatum praesentium. At ducimus ut quidem.
+            </div>
+            <div class="section">
+                <img src="../day26/짱구/유리.png" width="100">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem dolor itaque sapiente officia iste nisi eius ut voluptates non iusto consectetur provident in, repudiandae necessitatibus accusamus doloremque facere optio ratione.
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

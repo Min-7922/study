@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex05.html</title>
+    <style>
+        div.root {
+            width: 700px;
+            margin: auto;
+        }
+        p.target {
+            /* display: none; */
+            opacity: 0;
+            transition-duration: 0.5s;
+            /* visibility: hidden; */
+            height: 0;
+            overflow: hidden;
+            
+            /* display:none은 자리차지가 없이 없었던 것처럼 해준다 */
+        }
+        div.root > p:first-child:hover + p.target {
+            /* display: block; */
+            /* 첫번째 p에 마우스를 올리면(=버튼에 마우스를 올리면)
+               p.target 블럭이 보인다  */
+            opacity: 1;
+            /* visibility: visible; */
+            transition-duration: 1s;
+            height: 63px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>display: none</h1>
+    <hr>
+
+    <h3>모습이 보이지 않는다. 화면상의 자리차지도 없어진다</h3>
+
+    <div class="root">
+        <p> <button>버튼</button></p>
+        <p class="target">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta eligendi consequatur voluptate iure quas provident. Aperiam, repudiandae, architecto maxime pariatur blanditiis voluptates ipsum facilis reiciendis aliquam iusto rem adipisci provident.
+        </p>
+        <p><img src="danbi.jpg" width="100"></p>
+    </div>
+    
+</body>
+</html>

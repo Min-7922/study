@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.frame {
+            width: 1300px;
+            margin: 0 auto;
+        }
+        div.sub1{
+            position: sticky;
+            top: 0px;
+            background-color: white;
+        }
+        div.sub3 {
+            position: sticky;
+            top: 40px;
+            background-color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        li:hover {
+            cursor: pointer;
+        }
+        #basic {
+            display: flex;
+            list-style: none;
+        }
+        ul > li {
+            /* border: 1px solid pink; */
+            text-align: center;
+        }
+        #bold {
+            font-weight: bold;
+        }
+        div.sub1 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            border-bottom: 1px solid rgb(233, 227, 227);
+            height: 40px;
+            background-color: rgb(247, 248, 248);
+            position: sticky;
+            z-index: 2;
+        }
+
+        div.sub1 > ul {
+            margin: 0;
+            align-items: center;
+        }
+        div.sub1 > ul > li {
+            padding: 5px;
+            line-height: 40px;
+        }
+        div.logo {
+            display: flex;
+            height: 100px;
+            margin-bottom: 0;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        div.logo > p {
+            height: fit-content;
+            margin-bottom: 0;
+        }
+        div.sub2 {
+            display: flex;
+            justify-content: space-between;
+            height: 40px;
+            z-index: 1;
+        }
+        input{
+            all: unset;
+            /* border: 1px solid rgb(194, 194, 194); */
+            height: 25px;
+        }
+
+        div.sub2 > div > ul > li {
+            padding: 2px;
+            position: relative; top: -10px;
+        }
+
+        div.sub3 > ul {
+            margin-top: 5px;
+            margin-bottom: 0;
+            align-items: center;
+            border-bottom: 1px solid rgb(255, 251, 251);
+            border-top: 1px solid rgb(233, 227, 227);
+        }
+        div.sub3 > ul > li > a:hover {
+            color: hotpink;
+        }
+        div.sub3 > ul > li > a > span:hover {
+            color: rgb(255, 238, 0);
+        }
+
+        #menu_img ~ li {
+            flex: 1;
+            height: 40px;
+            line-height: 40px;
+            font-size: 13px;
+        }
+        div.remote{
+            width: fit-content;
+            height: fit-content;
+            position: fixed;
+            right: 0;
+            bottom: 50%;
+        }
+        div.remote > ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        div.remote > ul > li {
+            border: 0.5px solid rgb(197, 197, 197);
+            font-size: 20px;
+            padding: 10px;
+        }
+
+
+        #first {
+            background-color: rgb(41, 41, 41);
+        }
+        #first ~ li {
+            background-color: rgb(245, 244, 243);
+        }
+        #first:hover, #first ~ li:hover {
+            cursor: pointer;
+            background-color: rgb(253, 176, 215);
+            transition-duration: 0.3s;
+        }
+        ul.sublist {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 2px;
+            opacity: 0;
+            background-color: white;
+            transition-duration: 0.3s;
+            height: 0;
+        }
+        div.sub3 > ul > li:hover > ul {
+            display: block;
+            font-size: 12px;
+            transition-duration: 0.5s;
+            opacity: 1;
+            height: fit-content;
+        }
+        div.sub3 > ul > li:hover > ul > li:hover {
+            background-color: rgb(231, 236, 236);
+            transition-duration: 0.2s;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <!-- <div class="top">           -->
+    
+            <div class="sub1">
+                <ul id="basic">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN US</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                    <li id="bold"><a href="#">| &nbspMY PAGE</a></li>
+                    <li id="bold"><a href="#">| &nbspBOOKMARK</a></li>
+                </ul>
+                
+                <ul id="basic">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">상품문의</a></li>
+                    <li><a href="#">상품후기</a></li>
+                </ul>
+    
+            </div>
+    
+            <div class="logo"><p>D'ARLES</p></div>
+    
+            <div class="sub2">
+                <div>
+                    <ul id="basic">
+                        <li><a href="#"><img src="이미지/페북로고.PNG" height="30px"></a></li>
+                        <li><a href="#"><img src="이미지/인스타로고.PNG" height="30px"></a></li>
+                        <li><a href="#"><img src="이미지/유튜브로고.PNG" height="30px"></a></li>
+                    </ul>
+                </div>
+                <div style="display: flex; border: 1px solid rgb(233, 227, 227); height: 30px;">
+                    <input type="text" style="font-size: 13px; padding-left: 5px;">
+                    <input type="submit" value="🔍" style="font-size: 14px; cursor: pointer;">
+                </div>
+                
+            </div>
+    
+            <div class="sub3">
+                <ul id="basic">
+                    <li id="menu_img" style="height: 40px;">
+                        <a href="#"><img src="이미지/메뉴.PNG" height="40px"></a>
+                    </li>
+                    <li><a href="#" style="color: hotpink;">RONA universe</a></li>
+                    <li><a href="#">남성의류</a>
+                        <ul class="sublist">
+                            <li>아우터</li>
+                            <li>탑</li>
+                            <li>세트</li>
+                            <li>바텀</li>
+                            <li>악세서리</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">탑</a>
+                        <ul class="sublist">
+                            <li>니트</li>
+                            <li>셔츠</li>
+                            <li>블라우스</li>
+                            <li>후드</li>
+                            <li>멘투멘</li>
+                            <li>반팔T</li>
+                            <li>긴팔T</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">드레스</a>
+                        <ul class="sublist">
+                            <li>롱/미디</li>
+                            <li>미니</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바텀</a>
+                        <ul class="sublist">
+                            <li>팬츠</li>
+                            <li>스커트</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul class="sublist">
+                            <li>ER</li>
+                            <li>NC</li>
+                            <li>BC</li>
+                            <li>Etc</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- /div  top -->
+    
+        <div class="mid" style="margin: auto;" align="center">
+            <div class="img">
+                <img src="다를이미지.PNG">
+            </div>
+        </div>
+
+        <div class="img1">
+            <p><img src="이미지/쇼핑몰1.PNG"></p>
+            <p><img src="이미지/쇼핑몰1.PNG"></p>
+            <p><img src="이미지/쇼핑몰1.PNG"></p>
+            <p><img src="이미지/쇼핑몰1.PNG"></p>
+            <p><img src="이미지/쇼핑몰1.PNG"></p>
+        </div> 
+
+        <div class="remote">
+            <ul>
+                <li id="first"><a href="#">🧡</a></li>
+                <li><a href="#">💛</a></li>
+                <li><a href="#">💚</a></li>
+                <li><a href="#">💔</a></li>
+                <li><a href="#">💙</a></li>
+                <li><a href="#">💜</a></li>
+                <li><a href="#">🤍</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    
+    
+</body>
+</html>

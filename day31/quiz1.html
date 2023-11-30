@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.all {
+            border: 3px solid grey;
+            padding: 0;
+            width: 1200px;
+            margin: auto;
+            align-content: center;
+        }
+        div.top {
+            /* border: 1px solid black; */
+            margin-top: 0px;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 140px;
+            background-color: rgb(247, 247, 243);
+        }
+        div.top > h1 {
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(51, 143, 248);
+            color: white;
+            padding: 10px;
+            font-size: 28px;
+        }
+        div.mid {
+            display: flex;
+            margin: 15px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            width: fit-content;
+        }
+        div.left {
+            background-color: black;
+
+        }
+        div.left > ul > li {
+            margin: 0;
+            padding: 10px 15px;
+            font-size: 14px;
+            width: 120px;
+            height: max-content;
+            /* border: 1px solid red; */
+        }
+        div.left > ul > li > a {
+            all: unset;
+            color: white;
+        }
+        div.left > ul > li:hover {
+            cursor: pointer;
+            background-color: grey;
+        }
+        div.right {
+            margin: 0 15px;
+        }
+        div.right > p {
+            padding: 5px;
+        }
+        div.right > h2 {
+            padding-left: 5px;
+        }
+        div.bottom {
+            border-top: 2px solid grey;
+            margin: 10px 40px;
+            font-size: 13px;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="top">
+            <h1 align="center">LOGO</h1>
+        </div>
+    
+        <div class="mid">
+            <div class="left">
+                <ul>
+                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Menu2</a></li>
+                    <li><a href="#">Menu3</a></li>
+                </ul>
+            </div>
+    
+            <div class="right">
+                <h2>Hello World</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eum aspernatur perspiciatis vero culpa accusamus ad mollitia atque itaque minus explicabo eligendi laudantium quas facilis nihil fugit ea, facere dolor.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus alias beatae, animi eos eum fugit ipsum dolorem nihil sed rerum nesciunt qui laboriosam illo cum cupiditate delectus quasi dolorum tempora!</p>
+            </div>
+        </div>
+    
+        <div class="bottom" align="center">ⓒcopy</div>
+    </div>
+
+</body>
+</html>

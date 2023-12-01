@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex05.html</title>
+    <style>
+        div.overlay {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        div.content {
+            position: fixed;
+            /* top: 50%; */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 위 4줄 전체를 쓰면 특정 div가 다른 요소와 상관없이 화면 한가운데에 놓이게 된다 */
+
+            top: 100%;
+            transition-duration: 1s;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px black;
+            z-index: 2;
+            padding: 10px;
+        }
+        .button {
+            width: 100px;
+            margin: 10px;
+            position: relative;
+            border: 2px solid red;
+            background-color: white;
+            z-index: 3;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        div.button:hover {
+            background-color: red;
+            color: white;
+        }
+        div.modal {
+            /* display: none; */
+            opacity: 0;
+            transition-duration: 0.5s;
+            z-index: -1;
+        }
+        div.button:active + div.modal > div.content {
+            top: 50%;
+            transition-duration: 1s;
+        }
+
+        div.button:active + div.modal {
+            /* display: block; */
+            opacity: 1;
+            transition-duration: 0.5s;
+            z-index: 2;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>css 모달</h1>
+    <hr>
+
+    <div class="root">
+
+        <div class="button">버튼1</div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti modi iusto accusantium. Tenetur, alias molestiae animi enim ut sunt ullam excepturi magnam neque exercitationem iusto cum ducimus odio vitae dolorem!</p>
+            </div>
+        </div>
+
+        <div class="button">버튼2</div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="content">
+                <p align="center">
+                    <img src="danbi.jpg" width="200">
+                </p>
+                <p align="center">단비꺼야!!</p>
+            </div>
+        </div>
+
+        <div class="button" id="rotate">버튼3</div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="content">
+                <p align="center"><img src="짱아.png" width="200"></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
